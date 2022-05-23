@@ -33,6 +33,7 @@
       "packages/*"
     ]
   },
+  "version": "1.0.0",
   "dependencies": {},
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": "eslint --fix",
