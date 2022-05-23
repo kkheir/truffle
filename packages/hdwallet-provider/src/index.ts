@@ -28,11 +28,11 @@ import type {
   JSONRPCRequestPayload,
   JSONRPCResponsePayload
 } from "ethereum-protocol";
-import type { ConstructorArguments } from "./constructor/ConstructorArguments";
-import { getOptions } from "./constructor/getOptions";
-import { getPrivateKeys } from "./constructor/getPrivateKeys";
-import { getMnemonic } from "./constructor/getMnemonic";
-import type { ChainId, ChainSettings, Hardfork } from "./constructor/types";
+import type { ConstructorArguments } from "./_constructor/ConstructorArguments";
+import { getOptions } from "./_constructor/getOptions";
+import { getPrivateKeys } from "./_constructor/getPrivateKeys";
+import { getMnemonic } from "./_constructor/getMnemonic";
+import type { ChainId, ChainSettings, Hardfork } from "./_constructor/types";
 import { signTypedData } from "eth-sig-util";
 
 // Important: do not use debug module. Reason: https://github.com/trufflesuite/truffle/issues/2374#issuecomment-536109086
@@ -98,7 +98,7 @@ class HDWalletProvider {
         [
           `No provider or an invalid provider was specified: '${providerToUse}'`,
           "Please specify a valid provider or URL, using the http, https, " +
-            "ws, or wss protocol.",
+          "ws, or wss protocol.",
           ""
         ].join("\n")
       );
@@ -118,7 +118,7 @@ class HDWalletProvider {
     if (this.addresses.length === 0) {
       throw new Error(
         `Could not create addresses from your mnemonic or private key(s). ` +
-          `Please check that your inputs are correct.`
+        `Please check that your inputs are correct.`
       );
     }
 
